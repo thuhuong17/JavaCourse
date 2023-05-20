@@ -1,0 +1,92 @@
+-----------------------------chương trình đầu tiên và chú thích ------------------
+1. Hiển thị ra màn hình dòng chữ nào đó bạn có thể sử dụng câu lệnh System.out.println()
+public class HelloWorld {
+	public static void main(String[]args) {
+		System.out.println("Codelearn");
+	}
+}
+2. \n: hiển thị thông tin trên nhiều dòng
+----------------------------Biến và kiểu dữ liệu ---------------------
+1. Khai báo biến cú pháp:
+int tên_biến;
+vd int a;
+2.Quy tắc đặt tên
+Tên biến có thể có chữ cái, chữ số và dấu gạch dưới nhưng ký tự đầu tiên của tên biến bắt buộc phải là dấu gạch dưới hoặc chữ cái.
+Tên biến không được có khoảng trắng.
+Tên biến không được trùng với các từ khóa như int, float, double, class, ...
+3. Kiểu dữ liệu 
+Kiểu số nguyên: int
+Kiểu chuỗi: String
+Kiểu số thực: double(sử dụng nhiều hơn), float(ít sử dụng hơn)
+Kiểu ký tự: char - kiểu có thể  kiểu dữ liệu chỉ lưu trữ được 1 ký tự trong bảng mã UTF-16, ký tự này 
+có thể là một chữ cái (a, b, c, ..., x, y, z), một chữ số  (0, 1, 2, ..., 9), một phép toán (+, -, *, /) 
+hay một ký tự bất kỳ khác (!, &, ...).
+Kiểu luận lý: boolean (true/false)
+vd: String name = "Codelearn";
+char c = 'x';
+char d = 'a' + 3;
+		System.out.println(d); 
+System.out.println("a = " + (int) 'a');
+Trong ngôn ngữ lập trình Java có các kiểu dữ liệu lưu trữ số nguyên như: byte, short, int, long, ...
+Sự khác biệt giữa các kiểu dữ liệu này là miền giá trị:
+Miền giá trị của kiểu byte là từ -128 tới  127.
+Miền giá trị của kiểu short là từ -32768 tới 32767.
+Miền giá trị của kiểu int là từ -2147483648 tới 2147483647.
+Miền giá trị của kiểu long là từ -9223372036854775808 tới 9223372036854775807
+--------------------------------- CÁC TOÁN TỬ -----------------------
+1. Nhập xuất dữ liệu cơ ban
+Để nhập dữ liệu từ bàn phím bạn cần tạo ra đối tượng thuộc lớp Scanner trong package java.util.Scanner. 
+vd
+Scanner sc = new Scanner(System.in);
+String name = sc.next();
+System.out.println("Hello "+name);
+2. next(): không đọc được khoảng trắng
+nextLine(): đọc được khoảng trắng
+3.Chia lấy phần dư dùng a%b
+vd System.out.println("In 15 years, age of "+ name+ " will be "+(age+15));
+4. BT hoán đổi 2 số
+public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = a;
+		a = b;
+		b = c;
+		System.out.println("after swapping, a = " + a + ", b = " + b);
+	}
+5. int -> nextInt();
+double -> nextDouble();
+String -> next();
+6. char c = (char)(sc.next().charAt(0)+1);-> kết quả là d
+7. Toán từ so sánh
+Toán tử	  Cách sử dụng	Mô tả
+==	    a == b	        Kiểm tra xem giá trị của a có bằng giá trị của b.
+!=	    a != b	        Kiểm tra xem giá trị của a có khác giá trị của b.
+>	      a > b	          Kiểm tra xem giá trị của a có lớn hơn giá trị của b.
+<	      a < b	          Kiểm tra xem giá trị của a có nhỏ hơn giá trị của b.
+>=	    a >= b	        Kiểm tra xem giá trị của a có lớn hơn hoặc bằng giá trị của b.
+<=	    a <= b	        Kiểm tra xem giá trị của a có nhỏ hơn hoặc bằng giá trị của b.
+-----------------------CÁC CÂU LỆNH ĐIỀU KIỆN -----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
