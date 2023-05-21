@@ -1,1 +1,74 @@
-
+---------------------------CÁC CÂU LỆNH ĐIỀU KIỆN ------------------
+1. Mệnh đề if-else
+2. Kiểm tra chuỗi tên bằng nhau
+- Không dùng == để so sánh trong String
+- Sử dụng equal() để so sánh
+vd 
+Scanner sc = new Scanner(System.in);
+		String a = sc.nextLine();
+		String b = sc.nextLine();
+		if(a.equals(b)) {
+			System.out.println("A is equal to B");
+		}
+		if (a == b) {
+			System.out.println("A == B");
+		}
+3. Kiểm tra số nào lớn nhất trong 3 số nguyên đã nhập 
+Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		if(a>=b && a>=c)
+		{
+			System.out.println(a);
+		}
+		if(b>=a && b>=c)
+		{
+			System.out.println(b);
+		}
+		if(c>=a && c>=b)
+		{
+			System.out.println(c);
+		}
+4. Kiểm tra 3 số nguyên nhập vào tạo thành dãy số tăng dần hay giảm dần
+Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		if(a<=b && b<=c)
+				System.out.println("increasing");
+		else if(a>=b && b>=c)	
+				System.out.println("decreasing");
+		else
+			System.out.println("neither increasing nor decreasing order");
+ 5. if -> else if ->else
+ ----------------------------------VÒNG LẶP-------------------
+ 1. Cấu trúc vòng lặp for:
+ for (int i = 1; i <= n; i++) {
+	System.out.print(i + " ");
+}
+Giải thích: 
+Bước 1. Tạo ra biến i kiểu nguyên và gán giá trị cho i = 1
+Bước 2. Nếu i <= 5 thì thực hiện khối lệnh bên trong vòng for (chính là đoạn code System.out.print(i + " ");). Ngược lại nếu i <= 5 là false thì dừng không chạy tiếp bước 3.
+Bước 3. Tăng i lên 1 đơn vị và quay lại bước 2 (i++ tương đương với i = i + 1 hoặc i += 1).
+2. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
