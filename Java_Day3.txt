@@ -39,7 +39,7 @@ Ví dụ nếu bạn nhập n = 6, arr = [3, 8, 7, 8, 3, 3], k = 3 như bên dư
 		System.out.print(total);
 	}
 3. Cho một mảng các số nguyên n phần tử arr. Bạn hãy viết chương trình hiển thị những số lớn hơn hoặc bằng 0 và nhỏ hơn hoặc bằng 10 trong mảng arr.
-    Scanner sc = new Scanner(System.in);
+    		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int a[] = new int[n];
 
@@ -54,7 +54,221 @@ Ví dụ nếu bạn nhập n = 6, arr = [3, 8, 7, 8, 3, 3], k = 3 như bên dư
 				System.out.print(a[i]+ " ");
 			}
 		}
-4. 
+4. Cho một mảng các số nguyên n phần tử arr. Bạn hãy viết chương trình sắp xếp các phần tử của mảng theo thứ tự tăng dần và hiển thị ra màn hình mảng sau khi đã sắp xếp.
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int a[] = new int[n];
+
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+
+		for(int i=0; i<n;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					int temp = a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(a[i] + " ");
+		}
+	}
+5. Cú pháp để khai báo mảng 2 chiều với n hàng và m cột trong Java: int[][] arr = new int[n][m];
+6. Cho một mảng 2 chiều các số nguyên n hàng m cột arr được nhập từ bàn phím. Bạn hãy viết chương trình tính tổng các phần tử trong mảng arr.
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int[][] arr = new int[n][m];
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+
+		int answer = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				answer += arr[i][j];
+			}
+		}
+
+		System.out.print(answer);
+	}
+7. Cho một mảng 2 chiều các số nguyên n hàng m cột arr được nhập từ bàn phím. Bạn hãy viết chương trình tính tổng các phần tử chia hết cho 5 trong arr.
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int[][] arr = new int[n][m];
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		int total=0;
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				if(arr[i][j]%5==0)
+				{
+					total+=arr[i][j];
+				}
+			}
+		}
+		System.out.print(total);
+---------------------------XU LY CHUOI---------------------
+1. String bản chất cũng giống như một mảng các ký tự, để lấy ra ký tự thứ k bên trong String bạn có thể dùng phương thức charAt(k - 1); (String cũng giống như mảng, ký tự thứ k có chỉ số là k - 1):
+2.Cho xâu s và số nguyên k được nhập từ bàn phím. Bạn hãy viết chương trình in ra màn hình ký tự thứ k trong xâu s.
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		int k = sc.nextInt();
+		System.out.print(s.charAt(k-1));
+3. 
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		char c = sc.next().charAt(0);
+		int count=0;
+		for(int i=0;i<s.length();i++)
+		{
+			if(s.charAt(i)==c)
+			{
+				count++;
+			}
+		}
+		System.out.print(count);
+4.Cho xâu s và ký tự c được nhập từ bàn phím, bạn hãy viết chương trình in ra vị trí đầu tiên mà ký tự c xuất hiện trong xâu s, nếu ký tự c không xuất hiện trong s thì in ra -1.v
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		char c = sc.next().charAt(0);
+		int answer=-1;
+		for(int i =0; i<s.length();i++)
+		{
+			if(s.charAt(i)==c)
+			{
+				answer=i;
+				break;
+			}
+		}
+		System.out.print(answer);
+	}
+###5. Phương thức length
+Như bạn đã được học ở bài trước, đây là phương thức trả về độ dài của một String. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		String s = "Code";
+		System.out.print(s.length());
+	}
+}
+Kết quả khi chạy chương trình:
+4
+###6. Phương thức charAt
+Đây là phương thức trả về một ký tự trong String. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		String s = "Code";
+		System.out.print(s.charAt(2));
+	}
+}
+Kết quả:
+d
+###7. Phương thức replace
+Phương thức này dùng để thay thế các chuỗi/ký tự được tìm thấy thành chuỗi/ký tự khác. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		System.out.println("Cod3l3arn".replace('3', 'e'));
+		System.out.println("Blackcat".replace("Black", "White"));
+	}
+}
+Kết quả khi chạy chương trình:
+Codelearn
+Whitecat
+###8. Phương thức toUpperCase/toLowerCase
+Đây là hai phương thức dùng để chuyển các ký tự của một xâu từ in thường về in hoa và ngược lại. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		String s = "CoDeLeArN";
+		System.out.println(s.toUpperCase());
+		System.out.println(s.toLowerCase());
+	}
+}
+Kết quả khi chạy chương trình:
+CODELEARN
+codelearn
+###9. Phương thức indexOf
+Phương thức này trả về vị trí xuất hiện đầu tiên của một String trong String khác, nếu không tìm thấy thì trả về -1. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		String s = "Codelearn";
+		System.out.println(s.indexOf("learn"));
+		System.out.println(s.indexOf("black"));
+	}
+}
+Kết quả khi chạy chương trình:
+4
+-1
+###9. Phương thức startsWith và endsWith
+Phương thức này dùng để kiểm tra một xâu có bắt đầu hoặc kết thúc băng một xâu khác không. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		String name = "Codelearn";
+		System.out.println(name.startsWith("Code"));
+		System.out.println(name.startsWith("abc"));
+		System.out.println(name.endsWith("rn"));
+		System.out.println(name.endsWith("z"));
+	}
+}
+Kết quả khi chạy chương trình:
+true
+false
+true
+false
+###7. Phương thức split
+Phương thức này dùng để tách một xâu ra thành mảng các xâu dựa trên một xâu cho trước. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		String s = "Welcome to codelearn!";
+		String[] words = s.split(" ");
+		for(String word:words) {
+			System.out.println(word);
+		}
+	}
+}
+Kết quả khi chạy chương trình:
+Welcome
+to
+codelearn!
+8. Phương thức substring
+Đây là phương thức dùng để lấy ra một xâu con dựa trên chỉ số bắt đầu và chỉ số kết thúc của một xâu khác. Ví dụ:
+import java.util.Scanner;
+public class Array {
+	public static void main(String[] args) {
+		String name = "Codelearn";
+		System.out.println(name.substring(0, 2));
+		System.out.println(name.substring(0, 4));
+		System.out.println(name.substring(4));
+	}
+}
+Kết quả khi chạy chương trình:
+Co
+Code
+learn
+5. 
 
 
 
