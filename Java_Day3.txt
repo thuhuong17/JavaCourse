@@ -268,7 +268,261 @@ Kết quả khi chạy chương trình:
 Co
 Code
 learn
-5. 
+5. Cho xâu s được nhập vào từ bàn phím, bạn hãy viết chương trình hiển thị ra màn hình số các ký tự in hoa trong xâu s.
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		int answer = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
+				answer++;
+			}
+		}
+		System.out.print(answer);
+	}
+7. Cho xâu s được nhập và từ bàn phím, bạn hãy viết chương trình đảo ngược xâu s và hiển thị ra màn hình.
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		String answer = "";
+		for (int i = s.length() - 1; i >= 0; i--) {
+			answer += s.charAt(i);
+		}
+		System.out.print(answer);
+------------------------------ PHUONG THUC TRONG JAVA----------------
+1. Cú pháp để khai báo một phương thức đơn giản sẽ giống như sau:
+public static void <tên_phương_thức>(){
+	// Các đoạn code bên trong phương thức
+}
+2. Bạn hãy viết phương thức trả về tổng của các phần tử trong mảng các số nguyên arr được nhập vào từ bàn phím.
+Ví dụ
+Nếu bạn nhập n = 3, arr = [2, 4, 1] thì màn hình sẽ hiển thị ra 7.
+Nếu bạn nhập n = 4, arr = [2, 2, 3, 4] thì màn hình sẽ hiển thị ra 11.
+	import java.util.Scanner;
+
+	public class Method {
+	public static int sumOfArray(int[] arr) {
+		int total=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			total+=arr[i];
+		}
+		return total;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		for (int i = 0; i < n; i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.print(sumOfArray(arr));
+	}
+}
+3. Bạn hãy viết phương thức hiển thị ra màn hình những xâu có độ dài lớn hơn 3 trong mảng arr.
+Ví dụ
+Nếu bạn nhập n = 3, arr = ["abcd", "ab", "xyz"] thì màn hình sẽ hiển thị ra:
+abcd​
+Nếu bạn nhập n = 4, arr = ["1234", "abcde", "xy", "code"] thì màn hình sẽ hiển thị ra:
+1234 abcde code​
+	import java.util.Scanner;
+
+	public class Method {
+	public static void show(String[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].length() > 3) {
+				System.out.print(arr[i] + " ");
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		String[] arr = new String[n];
+		for (int i = 0; i < n; i++) {
+			arr[i] = sc.next();
+		}
+		show(arr);
+	}
+}
+4. Bạn hãy viết phương thức trả về số lớn nhất trong 3 số được nhập và từ bàn phím.
+
+Ví dụ
+
+Nếu bạn nhập a = 6, b = 2, c = 8 thì màn hình sẽ hiển thị ra 8.
+Nếu bạn nhập a = 4, b = 4, c = 4 thì màn hình sẽ hiển thị ra 4.
+Hướng dẫn
+Khi gặp câu lệnh return thì phương thức sẽ trả về kết quả được return luôn và sẽ không thực thi tiếp, do đó bạn có thể làm như sau:
+
+import java.util.Scanner;
+
+public class Method {
+	public static int max3(int a, int b, int c) {
+		if(a >= b && a >= c) {
+			return a;
+		}
+		if(b >= c) {
+			return b;
+		}
+		return c;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+
+		System.out.print(max3(a, b, c));
+	}
+}
+5. Cho hình tròn có bán kính r được nhập từ bàn phím, bạn hãy viết phương thức trả về chu vi của hình tròn này biết π = 3.14.
+
+Ví dụ nếu bạn nhập:
+
+3.5
+Thì chương trình sẽ hiển thị ra:
+
+21.98
+Hướng dẫn
+Code mẫu:
+
+import java.util.Scanner;
+
+public class Method {
+	public static double circumference(double r) {
+		return 2 * r * 3.14;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double r = sc.nextDouble();
+		System.out.print(circumference(r));
+	}
+}
+6. Cho số nguyên dương n được nhập từ bàn phím, bạn hãy viết phương thức đệ quy trả về n! (n giai thừa).
+
+Ví dụ nếu bạn nhập n = 5 thì chương trình sẽ hiển thị lên màn hình 120.
+
+Lý thuyết
+Phương thức đệ quy là phương thức mà gọi tới chính nó, ví dụ một phương thức đệ quy sẽ trông giống như sau:
+
+public static void recurse() {
+    ...
+    recurse();
+    ...
+}
+Do tính chất tự gọi lại chính nó nên để tránh việc chạy không bao giờ dừng bạn luôn cần có điểm dừng (điểm dừng được hiểu đơn giản là tới một lúc nào đó, phương thức đệ quy sẽ không gọi lại chính nó nữa).
+
+Mô tả phương thức đệ quy tính 5!:
+
+factorial(5)
+= 5 * factorial(4)
+= 5 * 4 * factorial(3)
+= 5 * 4 * 3 * factorial(2)
+= 5 * 4 * 3 * 2 * factorial(1)
+= 5 * 4 * 3 * 2 * 1
+= 120
+Điểm dừng ở ví dụ trên chính là khi đầu vào của phương thức factorial bằng 1 thì phương thức factorial sẽ trả về 1 thay vì gọi tiếp tới chính nó.
+
+Để hiểu rõ hơn bạn hãy xem ví dụ tiếp theo về phương thức đệ quy tính tổng các số từ 1 tới n:
+
+import java.util.Scanner;
+
+public class Method {
+	public static int sum(int n) {
+		if (n == 0) {
+			return 0;
+		}
+		return n + sum(n - 1);
+	}
+
+	public static void main(String[] args) {
+		System.out.print(sum(10));
+	}
+}
+Kết quả khi chạy chương trình:
+
+55
+Điểm dừng ở đây chính là khi n = 0 thì phương thức sum sẽ trả về 0 thay vì gọi tiếp tới chính nó.
+
+Bạn có thể làm bài này dựa vào ví dụ trên, nếu bạn vẫn chưa làm được thì có thể xem hướng dẫn bên dưới:
+
+Hướng dẫn
+Code mẫu:
+
+import java.util.Scanner;
+
+public class Method {
+	public static int factorial(int n) {
+	    if (n == 1) return 1;
+	    return n * factorial(n - 1);
+	}
+
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.print(factorial(n));
+	}
+}
+7. Cho số nguyên n được nhập từ bàn phím, bạn hãy viết phương thức đệ quy trả về tổng các số lẻ từ 1 tới n.
+
+Ví dụ nếu bạn nhập n = 5 thì chương trình sẽ hiển thị lên màn hình 9 (do 1 + 3 + 5 = 9).
+
+Hướng dẫn
+Bài này bạn cần kết hợp phương thức đệ quy với câu lệnh if-else.
+
+Code mẫu:
+
+import java.util.Scanner;
+
+public class Method {
+	public static int sum(int n) {
+		if (n == 1) return 1;
+	    if (n % 2 == 0) {
+	        return sum(n - 1);
+	    } else {
+	        return n + sum(n - 1);
+	    }
+	}
+
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.print(sum(n));
+	}
+}
+8. Cho mảng các số nguyên n phần tử arr được nhập từ bàn phím. Bạn hãy viết phương thức đệ quy tính tổng các phần tử của mảng.
+
+Nếu bạn vẫn chưa chưa thạo cách dùng phương thức đệ quy thì có thể xem hướng dẫn bên dưới.
+
+Hướng dẫn
+Bài này cũng khá giống bài trước, bạn chỉ cần lưu ý rằng phần tử đầu tiên của mảng là a[0] chứ không phải là a[1].
+
+Code mẫu:
+
+import java.util.Scanner;
+
+public class Method {
+	public static int sumOfArray(int[] arr, int n) {
+		if (n == 1) return arr[0];
+	    return arr[n - 1] + sumOfArray(arr, n - 1);
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.print(sumOfArray(arr, n));
+	}
+}
+
+
 
 
 
