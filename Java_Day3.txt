@@ -1,1 +1,77 @@
+--------------------------MANG-------------------
+1. Cho một mảng các số nguyên n phần tử arr và số nguyên k được nhập từ bàn phím. Bạn hãy viết chương trình hiển thị ra màn hình số phần tử có giá trị bằng k trong mảng arr.
+Ví dụ nếu bạn nhập n = 6, arr = [3, 8, 7, 8, 3, 3], k = 3 như bên dưới:
+    Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			arr[i] = sc.nextInt();
+		}
+		int k = sc.nextInt();
+		int count=0;
+		for(int i=0; i<n; i++)
+		{
+			if(arr[i]==k)
+			{
+				count++;
+			}
+		}
+		System.out.print(count);
+	}
+2. Cho một mảng các số nguyên n phần tử arr. Bạn hãy viết chương trình tính tổng các số lẻ lớn hơn 0 trong mảng.
+    Scanner sc = new Scanner(System.in);
+		int n =sc.nextInt();
+		int a[]= new int[n];
+
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int total =0;
+		for(int i=0; i<n;i++)
+		{
+			if(a[i]%2!=0 && a[i]>0)
+			{
+				total+=a[i];
+			}
+		}
+		System.out.print(total);
+	}
+3. Cho một mảng các số nguyên n phần tử arr. Bạn hãy viết chương trình hiển thị những số lớn hơn hoặc bằng 0 và nhỏ hơn hoặc bằng 10 trong mảng arr.
+    Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int a[] = new int[n];
+
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0; i<n;i++)
+		{
+			if(a[i]>=0 && a[i]<=10)
+			{
+				System.out.print(a[i]+ " ");
+			}
+		}
+4. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
