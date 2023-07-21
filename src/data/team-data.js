@@ -1,7 +1,7 @@
 export const teamData = [
   {
-    img: "/img/team-1.jpg",
-    name: "Ryan Tompson",
+    img: "/img/tre_em1.jpg",
+    name: "tre em",
     position: "Web Developer",
     socials: [
       {

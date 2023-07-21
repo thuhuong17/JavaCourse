@@ -1,15 +1,16 @@
-import { Home, Profile, SignIn, SignUp } from "@/pages";
+import { Home, SignIn, SignUp, Profile, Event, About, Donate, Service, Donate_One, Donate_Monthly} from "@/pages";
 import {
   HomeIcon,
-  UserCircleIcon,
   CalendarDaysIcon,
-  WrenchScrewdriverIcon,
+  PhoneIcon,
+  HeartIcon,
   ArrowRightOnRectangleIcon,
+  CurrencyDollarIcon,
   UserPlusIcon,
-  DocumentTextIcon,
 } from "@heroicons/react/24/solid";
-
+import Contact from "./pages/contact";
 export const routes = [
+  // ok
   {
     icon: HomeIcon,
     name: "home",
@@ -17,36 +18,56 @@ export const routes = [
     element: <Home />,
   },
   {
+    //oki
     icon: CalendarDaysIcon,
     name: "events",
     path: "/event",
-    element: <Profile />,
+    element: <Event />,
   },
   {
-    icon: WrenchScrewdriverIcon,
+    icon: ArrowRightOnRectangleIcon,
     name: "services",
     path: "/service",
-    element: <SignIn />,
+    element: <Service />,
   },
   {
-    icon: UserPlusIcon,
-    name: "impact",
-    path: "/impact",
-    element: <SignUp />,
-  },
-  {
+    //oki
     icon: UserPlusIcon,
     name: "about",
     path: "/about",
     element: <About />,
   },
   {
-    icon: DocumentTextIcon,
-    name: "about",
-    href: "",
-    target: "_blank",
-    element: "",
+
+    icon: PhoneIcon,
+    name: "Contact",
+    path: "/contact",
+    element: <Contact/>,
   },
+  {
+    icon: HeartIcon,
+    name: "Donate",
+    path: "/donate",
+    element: <Donate />,
+  },
+  {
+    icon: CurrencyDollarIcon,
+    name: "Donate One",
+    path: "/donate_one",
+    element: <Donate_One />,
+  },
+  {
+    icon: CurrencyDollarIcon,
+    name: "Donate Monthly",
+    path: "/donate_monthly",
+    element: <Donate_Monthly />,
+  },
+  {
+    icon: UserPlusIcon,
+    name: "SignIn",
+    path: "/signin",
+    element: <SignIn/>,
+  }
 ];
 
 export default routes;

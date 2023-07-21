@@ -12,13 +12,16 @@ import {
 import { UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
-import { featuresData, teamData, contactData } from "@/data";
+import { featuresData, teamData, contactData} from "@/data";
+import { Link } from "react-router-dom";
+//import {tre_em1} from "../public/img/tre_em1.jpg";
 
 export function Home() {
   return (
-    <>
+    // INTRODUC
+    <> 
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('./public/img/introduce1.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
@@ -28,16 +31,21 @@ export function Home() {
                 color="white"
                 className="mb-6 font-black"
               >
-                Welcome to our social protection center !jj
-{/*                 Hello world */}
+                Welcome to our social protection center !
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
                 This is a homepage of our website. Including about introduction, events information, donation and more information. 
               </Typography>
+              <Link to="/donate">
+              <Button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black" Link="/donate">DONATION NOW</Button>
+              </Link>
+              {/* <Link to ="/donate">hh</Link> */}
             </div>
           </div>
         </div>
       </div>
+      {/* KẾT THÚC INTRODUCE */}
+
       <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -54,35 +62,35 @@ export function Home() {
             ))}
           </div>
           <div className="mt-32 flex flex-wrap items-center">
+            {/* div - event */}
             <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
+              {/* <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
                 <UsersIcon className="h-6 w-6 text-blue-gray-900" />
-              </div>
-              <Typography
+              </div> */}
+              <PageTitle heading="ABOUT"></PageTitle>
+              {/* <Typography
                 variant="h3"
                 className="mb-3 font-bold"
                 color="blue-gray"
               >
-                Working with us is a pleasure
-              </Typography>
-              <Typography className="mb-8 font-normal text-blue-gray-500">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
-                <br />
-                <br />
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
+                ABOUT
+              </Typography> */}
+              <Typography className="mb-8 font-normal text-blue-gray-500 align=center">
+                {/* chung toi la trung tam bao tro */}
+                {/* <br /> */}
+                {/* <br /> */}
+                Trung tâm Bảo trợ xã hội Thanh Hóa tiền thân là trại Cứu tế Đông Thành được thành lập ngày 26/02/1964 trực thuộc Ban Tổ chức dân chính tỉnh Thanh Hóa theo Quyết định số 367-TCDC/UBTH ngày 26/02/1964 của UBHC tỉnh Thanh Hoá. Sau đó, do nhu cầu của công tác trợ giúp xã hội trên địa bàn tỉnh Trung tâm đã nhiều lần đổi tên gọi thành Trung tâm Bảo trợ xã hội Thanh Hóa được sử dụng từ năm 1987 đến nay.
               </Typography>
               <Button variant="outlined">read more</Button>
             </div>
+            {/* ket thuc div event */}
+            {/* mo dau div hinh anh */}
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg shadow-gray-500/10">
                 <CardHeader className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="/img/teamwork.jpeg"
+                    src="/img/tre_em1.jpg"
                     className="h-full w-full"
                   />
                 </CardHeader>
@@ -90,55 +98,86 @@ export function Home() {
                   <Typography
                     variant="h5"
                     color="blue-gray"
-                    className="mb-3 font-bold"
+                    align="center"
+                    className="mb-3 font-bold "
                   >
-                    Top Notch Services
+                    Social Protection Center
                   </Typography>
                   <Typography className="font-normal text-blue-gray-500">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
                   </Typography>
                 </CardBody>
               </Card>
             </div>
+            {/* ket thuc div hinh anh  */}
           </div>
         </div>
       </section>
-      <section className="px-4 pt-20 pb-48">
+      {/* KET THUC THE SECTION */}
+      {/* MO DAU DIV EVENT */}
+      <section className="px-4 pt-20 pb-30">
         <div className="container mx-auto">
-          <PageTitle heading="Here are our heroes">
-            According to the National Oceanic and Atmospheric Administration,
-            Ted, Scambos, NSIDClead scentist, puts the potentially record
-            maximum.
+          <PageTitle heading="EVENTS">
           </PageTitle>
-          <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-            {teamData.map(({ img, name, position, socials }) => (
+
+        <div className="w-full bg-white py-4 px-2">
+          <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
+            <img className="w-[400px] mx-auto my-4" src="/img/tre_em1.jpg" alt="/"></img>
+            <div className="">
+                <p className="text-[#331D2C] font-bold text-uppercase">Our Signature Events</p>
+                <div>                   
+                  <h1 className="">Ngày 19/07/2023</h1><br></br>
+                  </div>  
+                              
+                  <p>The Child Protection Center (CPC) has two major signature events annually — Cook for Courage in May and Holidays in Crestwood in November/December.
+                  As a national accredited child advocacy center, we support Child Abuse Prevention Month in April.
+                  In addition, we recognize a variety of events related to child abuse and child witnesses of violence, including National Domestic Violence Month in October....</p>
+                  <br></br>
+                  <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">Read more</button>
+            </div>
+          </div>
+          <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
+            <img className="w-[400px] mx-auto my-4" src="/img/tre_em1.jpg" alt="/"></img>
+            <div className="">
+                <p className="text-[#331D2C] font-bold text-uppercase">Our Signature Events</p>
+                <div>                   
+                  <h1 className="">Ngày 19/07/2023</h1><br></br>
+                  </div>  
+                              
+                  <p>The Child Protection Center (CPC) has two major signature events annually — Cook for Courage in May and Holidays in Crestwood in November/December.
+                  As a national accredited child advocacy center, we support Child Abuse Prevention Month in April.
+                  In addition, we recognize a variety of events related to child abuse and child witnesses of violence, including National Domestic Violence Month in October....</p>
+                  <br></br>
+                  <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">Read more</button>
+            </div>
+          </div>
+        </div>
+
+          {/* <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+            {teamData.map(({ img, name, title, socials }) => (
               <TeamCard
                 key={name}
                 img={img}
                 name={name}
-                position={position}
-                socials={
-                  <div className="flex items-center gap-2">
-                    {socials.map(({ color, name }) => (
-                      <IconButton key={name} color={color} variant="text">
-                        <i className={`fa-brands text-lg fa-${name}`} />
-                      </IconButton>
-                    ))}
-                  </div>
-                }
+                title={title}
+                // socials={
+                //   <div className="flex items-center gap-2">
+                //     {socials.map(({ color, name }) => (
+                //       <IconButton key={name} color={color} variant="text">
+                //         <i className={`fa-brands text-lg fa-${name}`} />
+                //       </IconButton>
+                //     ))}
+                //   </div>
+                // }
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
+      {/* MO DAU DIV .. */}
       <section className="relative bg-blue-gray-50/50 py-24 px-4">
-        <div className="container mx-auto">
-          <PageTitle heading="Build something">
-            Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos.
+        <div className="container mx-auto" >
+          <PageTitle heading="SERVICES">
+            
           </PageTitle>
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
@@ -162,8 +201,8 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle heading="Want to work with us?">
-            Complete this form and we will get back to you in 24 hours.
+
+          <PageTitle heading="CONTACT">
           </PageTitle>
           <form className="mx-auto mt-12 max-w-3xl text-center">
             <div className="mb-8 flex gap-8">
@@ -171,7 +210,7 @@ export function Home() {
               <Input variant="standard" size="lg" label="Email Address" />
             </div>
             <Textarea variant="standard" size="lg" label="Message" rows={8} />
-            <Button variant="gradient" size="lg" className="mt-8">
+            <Button variant="gradient" size="lg" className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">
               Send Message
             </Button>
           </form>

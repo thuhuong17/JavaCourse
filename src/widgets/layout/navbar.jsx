@@ -22,7 +22,7 @@ export function Navbar({ brandName, routes, action }) {
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {routes.map(({ name, path, icon, href, target }) => (
+      {/* {routes.map(({ name, path, icon, href, target }) => (
         <Typography
           key={name}
           as="li"
@@ -56,7 +56,12 @@ export function Navbar({ brandName, routes, action }) {
             </Link>
           )}
         </Typography>
-      ))}
+      ))} */}
+      <Link to = "/home">Home</Link>
+      <Link to = "/event">Event</Link>
+      <Link to = "/service">Service</Link>
+      <Link to = "/about">About</Link>
+      <Link to = "/contact">Contact</Link>
     </ul>
   );
 
@@ -70,14 +75,11 @@ export function Navbar({ brandName, routes, action }) {
         </Link>
         <div className="hidden lg:block">{navList}</div>
         <div className="hidden gap-2 lg:flex">
-          <a
-            href="https://www.material-tailwind.com/blocks?ref=mtkr"
-            target="_blank"
-          >
+          <Link to = "/donate">
             <Button variant="text" size="sm" color="white" fullWidth>
-              Login
+              DONATE
             </Button>
-          </a>
+          </Link>
           {React.cloneElement(action, {
             className: "hidden lg:inline-block",
           })}
@@ -103,12 +105,12 @@ export function Navbar({ brandName, routes, action }) {
         <div className="container mx-auto">
           {navList}
           <a
-            href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
+            href=""
             target="_blank"
             className="mb-2 block"
           >
-            <Button variant="text" size="sm" fullWidth>
-              login
+            <Button variant="text" size="sm" fullWidth >
+            DONATE
             </Button>
           </a>
           {React.cloneElement(action, {
@@ -121,16 +123,13 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
-  brandName: "Material Tailwind React",
+  brandName: "Social Protection Center - SPC",
   action: (
-    <a
-      href="https://www.creative-tim.com/product/material-tailwind-kit-react"
-      target="_blank"
-    >
-      <Button variant="gradient" size="sm" fullWidth>
-        Log out
-      </Button>
-    </a>
+    <Link to = "/signin">
+      <Button variant="gradient" size="sm" fullWidth >
+      Login</Button>
+    </Link>
+  
   ),
 };
 

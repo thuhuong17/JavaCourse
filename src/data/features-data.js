@@ -7,24 +7,24 @@ import {
 export const featuresData = [
   {
     color: "blue",
-    title: "Awarded Agency",
+    title: "Advocacy sessions with caregivers",
     icon: StarIcon,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      "660",
   },
   {
     color: "red",
-    title: "Free Revisions",
+    title: "Completed therapy sessions",
     icon: ArrowPathIcon,
     description:
-      "Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.",
+      "1120",
   },
   {
     color: "teal",
-    title: "Verified Company",
+    title: "Forensic Interviews",
     icon: FingerPrintIcon,
     description:
-      "Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!",
+      "660",
   },
 ];
 
